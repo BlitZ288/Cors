@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-container{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <p>Broken request</p>
+            <button id="broken-requst">Submit</button>
+        </div>
+        <div class="btn-container">
+            <p>Simple request</p>
+            <button id="simple-request">Submit</button>
+        </div>
+        <div class="btn-container">
+            <p>Default request</p>
+            <button id="default-request">Submit</button>
+        </div>
+        <div class="btn-container">
+            <p>Cookie requests</p>
+            <button id="cookie-request">Submit</button>
+        </div>
+
+    </div>
+    <script src="./js/cors.js">         
+
+    </script>
+    <script>
+    document.getElementById("broken-requst").addEventListener("click", () => {
+             brokenRequst();
+    });
+    document.getElementById("simple-request").addEventListener("click", () => {
+            simpleRequest();
+    });
+    document.getElementById("default-request").addEventListener("click", () => {
+            defaultRequest();
+    });
+    document.getElementById("cookie-request").addEventListener("click", () => {
+            cookieRequest();
+    });
+    </script>
+</body>
+</html>
